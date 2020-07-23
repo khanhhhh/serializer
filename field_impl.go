@@ -28,7 +28,7 @@ func toField(attribute string, data interface{}) (field field, err error) {
 			return field, err
 		}
 	default:
-		err := errors.New("Data not: int, string, []byte")
+		err := errors.New("Field is not: int, string, []byte")
 		return field, err
 	}
 	field.dataLength = uint64(len(field.data))
